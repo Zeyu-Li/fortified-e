@@ -1,6 +1,6 @@
 # Fortified e
 
-Using Monte Carlo for e in Fortran90
+Using Monte Carlo for e (Euler's number) in Fortran90
 
 ## License
 
