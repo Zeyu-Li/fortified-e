@@ -1,5 +1,5 @@
 program main
-
+    ! inits
     implicit none
     integer :: iterations
     integer :: sum_total = 0
@@ -9,13 +9,15 @@ program main
     real :: temp = 0
     integer :: inner_counter
 
+    ! print no new line
     write(*,"(A)",advance="no") "Number of iterations: "
     read *, iterations
     
-    call random_number(rand)
+    ! main iteration loop
     do while (counter < iterations)
         temp = 0
         inner_counter = 0
+        ! inner loop
         do while (temp < 1)
             call random_number(rand)
             temp = rand + temp
@@ -26,8 +28,8 @@ program main
         counter = counter + 1
     end do
 
+    ! approximates e
     e = real(sum_total) / real(iterations)
     ! print e
-    ! print *, "e = ", sum_total
     print *, "e = ", e
 end program main
